@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}OutGames{% endblock %}</title>
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/styleCMS.css') }}">
+        <script type="text/javascript" src="{{ asset('js/jquery.js') }}" ></script>
+        <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}" ></script>
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet' type='text/css'>
+    </head>
+
+    {% block body %}
+        <div class="container-fluid">
+            <div class="col-md-12">
+                <h2 class="log-title">Panneaux D'Administration Out Games</h2>
+                <div class="col-md-3"></div>
+                <div class="col-md-6 div-form">
+                    <div class="col-md-12">
+                        {% if error %}
+                        <div>
+                            {{ error.messageKey|trans(error.messageData, 'security') }}
+                        </div>
+                        {% endif %}
+                    </div>
+                    <div>
+                        <form action="{{ path("admin_login_check") }}" method="post">
+                            <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                            <div class="row">
+                                <div class="col-lg-offset-3 col-md-offset-3 col-lg-6 col-md-6">
+                                    <label for="username">Pseudo</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input class="form-control" type="text" id="username" name="_username" value="{{ last_username }}" required="required" placeholder="Username"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-offset-3 col-md-offset-3 col-lg-6 col-md-6">
+                                    <label for="password">Mot de Passe</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                        <input class="form-control" type="password" id="password" name="_password" required="required" placeholder="Mot de passe">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-offset-3 col-md-offset-3 col-lg-6 col-md-6">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><input type="checkbox" id="remember_me" name="_remember_me" value="on" /></span>
+                                        <label class="remember-me form-group" for="remember_me">Se souvenir de Moi</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-offset-3 col-md-offset-3 col-lg-6 col-md-6">
+                                    <input class="login btn-primary btn-lg" type="submit" id="_submit" name="_submit" value="Connection" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {% endblock %}
+
+</html>
+

@@ -1,0 +1,102 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.5"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="col-md-12 carousel-actus">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active col-md-12">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <img src="{{ asset('img/pogo.jpg') }}" class="carousel-img-data" alt="PokemonGO Eure et Loir">
+                <div class="carousel-caption">
+                    <h3>On est sur les reseaux</h3>
+                    <p>N'hésiter pas à nous suivre sur Facebook et Twitter. Toute l'actus PokemonGo Eure et Loire</p>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+
+        <div class="item col-md-12">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <img src="{{ asset('img/city.jpg') }}" class="carousel-img-data" alt="Out Games">
+                <div class="carousel-caption">
+                    <h3>Lancement de l'assoc</h3>
+                    <p>L'association Out Games est enfin lancés, n'hésiter pas à nous suivre, des évents, et des rassemblements seront organisés.</p>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+
+        <div class="item col-md-12">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <img src="{{ asset('img/pogo.jpg') }}" class="carousel-img-data" alt="PokemonGO Eure et Loir">
+                <div class="carousel-caption">
+                    <h3>On est sur les reseaux</h3>
+                    <p>N'hésiter pas à nous suivre sur Facebook et Twitter. Toute l'actus PokemonGo Eure et Loire</p>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+
+        <div class="item col-md-12">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <img src="{{ asset('img/vectorbcg.jpg') }}" class="carousel-img-data" alt="DDDDDD">
+                <div class="carousel-caption">
+                    <h3>Chania</h3>
+                    <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+</div>
+
+<div class="col-md-12 global-large-div">
+    <div class="col-md-4 fb-page">
+        <div class="fb-page" data-href="https://www.facebook.com/pokemongoEureetLoir" data-tabs="timeline" data-width="350" data-height="300" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+            <div class="fb-xfbml-parse-ignore">
+                <blockquote cite="https://www.facebook.com/pokemongoEureetLoir">
+                    <a href="https://www.facebook.com/pokemongoEureetLoir"></a>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <h3>Qui sommes nous ?</h3>
+        <p>Out Games est une association E-Sports basé à Chartres. Fondé à la base lors de la sortie de PokemonGO Eure et Loir, nous avons tout d'abord lancé la page Facebook "PokemonGO Chartres" devenu "PokemonGO Eure et Loire" suite à un article dans l'echo républicain.</p> 
+    </div>
+    <div class="col-md-4">
+        <a class="twitter-timeline" href="https://twitter.com/PokeGoEureLoir" data-height="300">Tweets by PokeGoEureLoir</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>
+</div>
+
+{% endblock %}
+
